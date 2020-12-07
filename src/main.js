@@ -1,3 +1,5 @@
-export default class App {}
+export default class App {
+  changes(change, app)
+}
 
 let app = new App();
