@@ -4,14 +4,22 @@ export default class App {
       console.log(i);
     }
   }
- /* sumarParesFor() {
-   
-  } */ /* Esta mal*/
+ sumarParesFor() {
+   let suma = 0;
+
+   for(let i = 1; i <= 20; i = i + 1) {
+     if(i%2 === 0) {
+       suma = suma + i;
+     }
+   }
+   return suma;
+  }
+
   sumarParesDo() {
     let i = 1;
     let suma = 0;
     do {
-      if(i%2 === 0) {
+      if(i % 2 == 0) {
         suma = suma + i;
       }
       i++;
@@ -24,6 +32,10 @@ export default class App {
 let app = new App();
 
 console.log("demo de función for");
+
 app.presentacion();
+
+console.log(app.sumarParesFor());
+
 console.log(app.sumarParesDo());
 
