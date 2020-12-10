@@ -4,28 +4,39 @@ export default class App {
       console.log(i);
     }
   }
- sumarParesFor() {
-   let suma = 0;
+  sumarParesFor() {
+    let suma = 0;
 
-   for(let i = 1; i <= 20; i = i + 1) {
-     if(i%2 === 0) {
-       suma = suma + i;
-     }
-   }
-   return suma;
+    for (let i = 1; i <= 20; i = i + 1) {
+      if (i % 2 === 0) {
+        suma = suma + i;
+      }
+    }
+    return suma;
   }
+
+  contarImparesFor(inicio, fin){
+    let impares = 0;
+    for(let i = inicio; i <= fin; i = i + 1) {
+      if( i%2 !== 0) {
+        impares = impares + 1
+      }
+    }
+    return impares;
+  }
+
 
   sumarParesDo() {
     let i = 1;
     let suma = 0;
     do {
-      if(i % 2 == 0) {
+      if (i % 2 == 0) {
         suma = suma + i;
       }
       i++;
     } while (i <= 20);
 
-    return suma
+    return suma;
   }
 }
 
@@ -37,5 +48,8 @@ app.presentacion();
 
 console.log(app.sumarParesFor());
 
+console.log(app.contarImparesFor());
+
 console.log(app.sumarParesDo());
+
 
